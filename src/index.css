@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  /* background: #333; */
+  color: #333;
+  min-height: 100vh;
+  margin: 0;
+  font-family: sans-serif;
+}

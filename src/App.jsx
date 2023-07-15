@@ -1,6 +1,6 @@
-import Card from './card.jsx'
-import Title from './title.jsx'
-import Navbar from './navbar.jsx'
+import Card from './components/card.jsx'
+import Title from './components/title.jsx'
+import Navbar from './components/navbar.jsx'
 import './App.css'
 
 const cards = [
@@ -30,23 +30,22 @@ const cards = [
   }
 ]
 
-const App = () => {
+function App() {
   return (
-    <>
-      <div className='App'>
-        <Navbar />
-        <section className='title-section'>
-          <Title words={['Educa', 'Enseña', 'Gestiona']}>Simplemen-t</Title>
-        </section>
-        <section className='cards-section'>
-          {cards.map(({ description, title, imgURL, id }) => (
-            <Card description={description} imgURL={imgURL} key={id}>
-              {title}
-            </Card>
-          ))}
-        </section>
-      </div>
-    </>
+    <div className='page'>
+      <Navbar/>
+      <section className='title-section'>
+        <Title words={['Educa', 'Enseña', 'Gestiona']}>Simplemen-t</Title>
+      </section>
+      <section className='cards-section'>
+        {cards.map(({ description, title, imgURL, id }) => (
+          <Card description={description} imgURL={imgURL} key={id}>
+            {title}
+          </Card>
+        ))}
+      </section>
+    </div>
   )
 }
+
 export default App

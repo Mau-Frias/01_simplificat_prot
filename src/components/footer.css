@@ -1,0 +1,13 @@
+.footer {
+  padding: 1rem;
+  background: #222;
+  color: #555;
+  width: 100%;
+  display: flex;
+  place-content: center;
+}
+
+.footer p {
+  margin: 0;
+  
+}

@@ -1,6 +1,7 @@
 import Card from './components/card.jsx'
 import Title from './components/title.jsx'
 import Navbar from './components/navbar.jsx'
+import Footer from './components/footer.jsx'
 import './App.css'
 
 const cards = [
@@ -21,19 +22,14 @@ const cards = [
     description: '"Inserte descripción profunda"',
     imgURL: 'https://picsum.photos/200/300',
     id: 3
-  },
-  {
-    title: 'Otra foto',
-    description: '"Inserte descripción profunda"',
-    imgURL: 'https://picsum.photos/200/300',
-    id: 4
   }
 ]
 
 function App() {
+
   return (
     <div className='page'>
-      <Navbar/>
+      <Navbar />
       <section className='title-section'>
         <Title words={['Educa', 'Enseña', 'Gestiona']}>Simplemen-t</Title>
       </section>
@@ -44,6 +40,7 @@ function App() {
           </Card>
         ))}
       </section>
+        <Footer/>
     </div>
   )
 }

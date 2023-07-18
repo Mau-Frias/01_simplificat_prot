@@ -1,11 +1,12 @@
 import './navbar.css'
 import React, { useState, useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
   const [isExpanded, setIsExpanded] = useState(false)
   const [scrollPos, setScrollPos] = useState(0)
   const navbarRef = useRef()
-  
+
   const handleClick = () => {
     setIsExpanded(!isExpanded)
   }
@@ -30,7 +31,7 @@ function Navbar() {
   return (
     <nav className='navbar' ref={navbarRef}>
       <div className='navbar-cont'>
-        <a href='/' className='navbar-logo'>
+        <a to='/' className='navbar-logo'>
           <h1>Simplifíca-T</h1>
         </a>
         <button className='hamburger' onClick={handleClick}>
@@ -46,30 +47,29 @@ function Navbar() {
             />
           </svg>
         </button>
-        <ul className={`navbar-menu ${isExpanded? 'expanded' : ''}`}>
+        <ul className={`navbar-menu ${isExpanded ? 'expanded' : ''}`}>
           <li>
-            <a href='/' className='link current'>
-              <i className='fa-solid fa-house fa-xs' /> Inico
-            </a>
+            <Link to='/' className='link'>
+              <i className='fa-solid fa-house fa-xs' /> Inicio
+            </Link>
           </li>
           <hr className='navbar-separator' />
           <li>
-            <a href='' className='link'>
+            <Link to='/nosotros' className='link'>
               <i className='fa-solid fa-users fa-xs' /> Nosotros
-            </a>
+            </Link>
           </li>
           <hr className='navbar-separator' />
           <li>
-            <a href='/' className='link'>
+            <Link to='/conocenos' className='link'>
               <i className='fa-solid fa-address-card fa-xs' /> Conocenos
-            </a>
+            </Link>
           </li>
           <hr className='navbar-separator' />
           <li>
-            <a href='/' className='link'>
+            <Link to='/contacto' className='link'>
               <i className='fa-solid fa-comments fa-xs' /> Contactos
-            </a>
-
+            </Link>
           </li>
         </ul>
       </div>

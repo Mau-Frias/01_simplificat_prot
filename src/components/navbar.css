@@ -39,8 +39,9 @@
   background-color: #333333;
 }
 
-.current {
+.active {
   color: #bbf;
+  background: #2b2b2b;
 }
 
 .navbar-logo {
@@ -81,22 +82,24 @@
     position: absolute;
     top: 2rem;
     left: 0;
-    gap: 1rem;
     font-size: 1.6rem;
     padding: 1rem;
     flex-direction: column;
     width: 100%;
     background: #222;
+    gap: 1rem;
   }
+  
 
   .navbar-menu.expanded {
-    display: block;
+    display: flex;
   }
 
   .navbar-menu li {
     text-align: center;
     margin: 0;
-
+    border-radius: 0;
+    width: 100%;
   }
 
   .hamburger {

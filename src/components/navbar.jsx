@@ -1,8 +1,8 @@
 import './navbar.css'
 import React, { useState, useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
-function Navbar() {
+function Navbar({current}) {
   const [isExpanded, setIsExpanded] = useState(false)
   const [scrollPos, setScrollPos] = useState(0)
   const navbarRef = useRef()
@@ -10,7 +10,7 @@ function Navbar() {
   const handleClick = () => {
     setIsExpanded(!isExpanded)
   }
-
+  
   const handleScroll = () => {
     const position = window.scrollY
     setScrollPos(position)
@@ -49,27 +49,27 @@ function Navbar() {
         </button>
         <ul className={`navbar-menu ${isExpanded ? 'expanded' : ''}`}>
           <li>
-            <Link to='/' className='link'>
+            <NavLink to='/' className='link'>
               <i className='fa-solid fa-house fa-xs' /> Inicio
-            </Link>
+            </NavLink>
           </li>
           <hr className='navbar-separator' />
           <li>
-            <Link to='/nosotros' className='link'>
+            <NavLink to='/nosotros' className='link'>
               <i className='fa-solid fa-users fa-xs' /> Nosotros
-            </Link>
+            </NavLink>
           </li>
           <hr className='navbar-separator' />
           <li>
-            <Link to='/conocenos' className='link'>
+            <NavLink to='/conocenos' className='link'>
               <i className='fa-solid fa-address-card fa-xs' /> Conocenos
-            </Link>
+            </NavLink>
           </li>
           <hr className='navbar-separator' />
           <li>
-            <Link to='/contacto' className='link'>
+            <NavLink to='/contacto' className='link'>
               <i className='fa-solid fa-comments fa-xs' /> Contactos
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </div>

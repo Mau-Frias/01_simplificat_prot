@@ -62,7 +62,7 @@ function Navbar({current}) {
           <hr className='navbar-separator' />
           <li>
             <NavLink to='/conocenos' className='link'>
-              <i className='fa-solid fa-address-card fa-xs' /> Conocenos
+              <i className='fa-solid fa-heart fa-xs' /> Valores
             </NavLink>
           </li>
           <hr className='navbar-separator' />

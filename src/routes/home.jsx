@@ -29,12 +29,16 @@ export default function Home() {
       <section className='title-section'>
         <Title words={['Educa', 'Enseña', 'Gestiona']}>Simplemen-t</Title>
       </section>
-      <section className='xcards-section'>        
+      <section className='xcards-section'>  
+      <h1 className='xcards-title'>Proyectos</h1>
+      <br />   
+      <div className="xcards-cont">
         {cards.map(({ description, title, imgURL, id }) => (
           <XCard description={description} imgURL={imgURL} key={id}>
             {title}
           </XCard>
         ))}
+      </div>
       </section>
     </div>
   )

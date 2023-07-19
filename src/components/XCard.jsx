@@ -1,4 +1,4 @@
-import './Xcard.css'
+import './XCard.css'
 
 function XCard({ children, description, imgURL }) {
   return (

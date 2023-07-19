@@ -1,6 +1,6 @@
-import './card.css'
+import './Xcard.css'
 
-function Card({ children, description, imgURL }) {
+function XCard({ children, description, imgURL }) {
   return (
     <div className='card'>
       <img src={imgURL} alt='random' />
@@ -10,4 +10,4 @@ function Card({ children, description, imgURL }) {
   )
 }
 
-export default Card
+export default XCard

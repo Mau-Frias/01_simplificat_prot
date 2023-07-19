@@ -1,0 +1,60 @@
+.ycard {
+  aspect-ratio: 16/3;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #fff;
+  color: #333;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  gap: 3rem;
+}
+
+.par {
+  flex-direction: row-reverse;
+}
+
+.par h2 {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.ycard .links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.ycard .links a {
+  color: #333;
+}
+
+.ycard:hover {
+  transform: scale(1.02);
+}
+
+@media screen and (max-width: 900px) {
+  .ycard {
+    aspect-ratio: none;
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .par h2 {
+    flex-direction: row;
+  }
+}
+
+h2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ycard img {
+  aspect-ratio: 1/1;
+  width: 100px;
+  border-radius: 50%;
+}

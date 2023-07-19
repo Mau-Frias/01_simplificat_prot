@@ -1,0 +1,27 @@
+.ycards-section {
+  margin: auto;
+  width: 80%;
+  background: #fff;
+  /* box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2); */
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-items: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+  .ycards-section {
+    width: 90%;
+    box-shadow: none;
+  }
+}
+
+.nosotros {
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+}

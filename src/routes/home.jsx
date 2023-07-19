@@ -1,5 +1,5 @@
 import Title from '../components/title'
-import Card from '../components/card'
+import XCard from '../components/XCard'
 import './home.css'
 
 const cards = [
@@ -29,11 +29,11 @@ export default function Home() {
       <section className='title-section'>
         <Title words={['Educa', 'Enseña', 'Gestiona']}>Simplemen-t</Title>
       </section>
-      <section className='cards-section'>
+      <section className='xcards-section'>        
         {cards.map(({ description, title, imgURL, id }) => (
-          <Card description={description} imgURL={imgURL} key={id}>
+          <XCard description={description} imgURL={imgURL} key={id}>
             {title}
-          </Card>
+          </XCard>
         ))}
       </section>
     </div>

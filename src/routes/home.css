@@ -1,4 +1,4 @@
-.cards-section {
+.xcards-section {
   margin: auto;
   width: 80%;
   background: #fff;
@@ -11,11 +11,13 @@
   justify-items: center;
 }
 
+
+
 .title-section {
   display: flex;
   justify-items: center;
   align-items: center;
-  height: calc(100vh - 60px);
+  height: 90vh;
 }
 
 .home {
@@ -25,4 +27,5 @@
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  padding: 2rem;
 }

@@ -1,22 +1,22 @@
 {
   "cards": [
-  {
-    "title": "Random",
-    "description": "No se que poner",
-    "imgURL": "Corgi_palceholder.jpeg",
-    "id": 1
-  },
-  {
-    "title": "Aleatorio",
-    "description": "Si tu me hubieras dicho siempre la verdad",
-    "imgURL": "Corgi_palceholder.jpeg",
-    "id": 2
-  },
-  {
-    "title": "Otra foto",
-    "description": "Inserte descripción profunda",
-    "imgURL": "Corgi_palceholder.jpeg",
-    "id": 3
-  }
+    {
+      "title": "Random",
+      "description": "No se que poner",
+      "imgURL": "Corgi_palceholder.jpeg",
+      "id": 1
+    },
+    {
+      "title": "Aleatorio",
+      "description": "Si tu me hubieras dicho siempre la verdad",
+      "imgURL": "Corgi_palceholder.jpeg",
+      "id": 2
+    },
+    {
+      "title": "Otra foto",
+      "description": "Inserte descripción profunda",
+      "imgURL": "Corgi_palceholder.jpeg",
+      "id": 3
+    }
 ]
 }

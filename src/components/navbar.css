@@ -46,6 +46,7 @@
 
 .nb-logo {
   text-decoration: none;
+  cursor: pointer;
 }
 
 .nb-logo h1 {

@@ -2,9 +2,10 @@ import Title from './title.jsx'
 import XCard from '../../components/XCard'
 import './home.css'
 
-import cards from '../../data/xcards.json'
+import homeData from '../../data/home.json'
 
 export default function Home() {
+  const cards = homeData.cards
   return (
     <div className='home'>
       <section className='hm-title-section'>
@@ -14,7 +15,7 @@ export default function Home() {
       <h1 className='hm-cards-title title'>Proyectos</h1>
       <br />   
       <div className="hm-cards-cont">
-        {cards.cards.map(({ description, title, imgURL, id }) => (
+        {cards.map(({ description, title, imgURL, id }) => (
           <XCard description={description} imgURL={imgURL} key={id}>
             {title}
           </XCard>

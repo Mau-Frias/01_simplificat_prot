@@ -1,8 +1,10 @@
 import './navbar.css'
 import React, { useState, useEffect, useRef } from 'react'
 import { NavLink } from 'react-router-dom'
+import navData from '../data/navbar.json'
 
-function Navbar() {
+function Navbar({ scrollPos }) {
+  const links = navData.links
   const [isExpanded, setIsExpanded] = useState(false)
   const [fixed, setFixed] = useState(true)
   const navbarRef = useRef()
@@ -14,8 +16,7 @@ function Navbar() {
   const handleScroll = () => {
     if (window.scrollY >= 500) {
       setFixed(false)
-    }
-    else {
+    } else {
       setFixed(true)
     }
   }
@@ -48,29 +49,16 @@ function Navbar() {
         </button>
 
         <ul className={`nb-menu ${isExpanded ? 'nb-expanded' : ''}`}>
-          <li>
-            <NavLink to='/' className='nb-link'>
-              <i className='fa-solid fa-house fa-xs' /> Inicio
-            </NavLink>
-          </li>
-          <hr className='nb-separator' />
-          <li>
-            <NavLink to='/nosotros' className='nb-link'>
-              <i className='fa-solid fa-users fa-xs' /> Nosotros
-            </NavLink>
-          </li>
-          <hr className='nb-separator' />
-          <li>
-            <NavLink to='/valores' className='nb-link'>
-              <i className='fa-solid fa-heart fa-xs' /> Valores
-            </NavLink>
-          </li>
-          <hr className='nb-separator' />
-          <li>
-            <NavLink to='/contacto' className='nb-link'>
-              <i className='fa-solid fa-comments fa-xs' /> Contactos
-            </NavLink>
-          </li>
+          {links.map(({ route, name, iconClass }) => (
+            <>
+              <li key={name}>
+                <NavLink to={route} className={'nb-link'}>
+                  <i className={iconClass} /> {name}
+                </NavLink>
+              </li>
+              <hr className='nb-separator' />
+            </>
+          ))}
         </ul>
       </div>
     </nav>

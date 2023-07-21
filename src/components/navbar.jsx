@@ -51,7 +51,7 @@ function Navbar({ scrollPos }) {
         <ul className={`nb-menu ${isExpanded ? 'nb-expanded' : ''}`}>
           {links.map(({ route, name, iconClass }) => (
             <>
-              <li>
+              <li key={name}>
                 <NavLink to={route} className={'nb-link'}>
                   <i className={iconClass} /> {name}
                 </NavLink>

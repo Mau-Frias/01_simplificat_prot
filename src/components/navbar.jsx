@@ -2,7 +2,7 @@ import './navbar.css'
 import React, { useState, useEffect, useRef } from 'react'
 import { NavLink } from 'react-router-dom'
 
-function Navbar() {
+function Navbar({scrollPos}) {
   const [isExpanded, setIsExpanded] = useState(false)
   const [fixed, setFixed] = useState(true)
   const navbarRef = useRef()

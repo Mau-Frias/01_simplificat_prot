@@ -1,33 +1,41 @@
-.card {
+.x-card {
   width: 15rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #fff;
-  color: #333;
-  padding: 1rem;
   border-radius: 0.5rem;
   transition: all 0.2s ease-in-out;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  
+  border-bottom: solid 2px #bbba;
+  background: #ccc1;
+  overflow: hidden;
 }
 
-.card:hover {
+.x-card:hover {
   transform: scale(1.01);
   transform: translateY(-0.5rem);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.card img {
-  border-radius: 0.5rem;
+.x-card img {
   width: 100%;
   height: auto;
 }
 
-.card h2 {
+.x-text-cont {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.x-card-title {
   margin: 0;
 }
 
-.card p {
+.x-card p {
   font-size: large;
   margin: 0;
 }

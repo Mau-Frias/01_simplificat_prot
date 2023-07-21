@@ -1,4 +1,24 @@
-.content {
+.App {
   margin-top: 60px;
+  /* overflow-y: scroll;
+  max-height: 100vh; */
+}
+
+.footer {
+  padding: 1rem;
+  background: #222;
+  color: #555;
+  width: 100%;
+  display: flex;
+  place-content: center;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.title {
+  margin: 0;
+  font-size: 3rem;
 }
 

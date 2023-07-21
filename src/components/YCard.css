@@ -1,4 +1,4 @@
-.ycard {
+.y-card {
   aspect-ratio: 16/3;
   width: 70%;
   display: flex;
@@ -13,48 +13,70 @@
   gap: 3rem;
 }
 
-.par {
-  flex-direction: row-reverse;
-}
-
-.par h2 {
-  display: flex;
-  flex-direction: row-reverse;
-}
-
-.ycard .links {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.ycard .links a {
-  color: #333;
-}
-
-.ycard:hover {
+.y-card:hover {
   transform: scale(1.02);
 }
 
+.y-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: #333 dashed 2px;
+}
+
+.y-par {
+  flex-direction: row-reverse;
+}
+
+.y-par.y-title {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.y-links {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.y-links a {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 10px;
+  background: #bbb5;
+  color: #555;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 7px 0;
+}
+
+.y-links a:hover {
+  opacity: .8;
+}
+
+.y-img-link-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.y-card img {
+  aspect-ratio: 1/1;
+  width: 100px;
+  border-radius: 50%;
+  border: solid 2px var(--light-blue);
+}
+
 @media screen and (max-width: 900px) {
-  .ycard {
+  .y-card {
     aspect-ratio: none;
     width: 100%;
     flex-direction: column;
   }
   
-  .par h2 {
+  .y-par.y-title {
     flex-direction: row;
   }
 }
 
-h2 {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.ycard img {
-  aspect-ratio: 1/1;
-  width: 100px;
-  border-radius: 50%;
-}

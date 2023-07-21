@@ -1,4 +1,8 @@
-.ycards-section {
+.nosotros {
+  padding: 1rem;
+}
+
+.ns-cards-section {
   margin: auto;
   width: 80%;
   background: #fff;
@@ -12,16 +16,8 @@
 }
 
 @media screen and (max-width: 900px) {
-  .ycards-section {
+  .ns-cards-section {
     width: 90%;
     box-shadow: none;
   }
-}
-
-.nosotros {
-  padding: 1rem;
-}
-
-h1 {
-  font-size: 3rem;
 }

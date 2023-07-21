@@ -9,7 +9,7 @@
   z-index: 2;
 }
 
-.navbar-cont {
+.nb-cont {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,15 +19,15 @@
   margin: 0 auto;
 }
 
-.navbar-menu {
+.nb-menu {
   display: flex;
   align-items: center;
   list-style: none;
   font-size: 1.5rem;
 }
 
-.link {
-  color: #ffffff;
+.nb-link {
+  color: #fff;
   background: transparent;
   text-decoration: none;
   padding: 0.5rem 1rem;
@@ -35,8 +35,8 @@
   border-radius: 5px;
 }
 
-.navbar-menu li a:hover {
-  background-color: #333333;
+.nb-menu li a:hover {
+  background-color: var(--dark);
 }
 
 .active {
@@ -44,11 +44,11 @@
   background: #2b2b2b;
 }
 
-.navbar-logo {
+.nb-logo {
   text-decoration: none;
 }
 
-.navbar-logo h1 {
+.nb-logo h1 {
   font-size: 2rem;
   font-weight: 600;
   margin: 0;
@@ -56,15 +56,15 @@
   color: #fff;
 }
 
-.navbar-logo:hover {
+.nb-logo:hover {
   opacity: 0.8;
 }
 
-.navbar-unfixed {
+.nb-unfixed {
   top: -70px;
 }
 
-.hamburger {
+.nb-hamburger {
   border: 0;
   height: 40px;
   width: 40px;
@@ -76,8 +76,12 @@
   display: none;
 }
 
+.nb-separator {
+  display: none;
+}
+
 @media screen and (max-width: 900px) {
-  .navbar-menu {
+  .nb-menu {
     display: none;
     position: absolute;
     top: 2rem;
@@ -91,22 +95,22 @@
   }
   
 
-  .navbar-menu.expanded {
+  .nb-menu.nb-expanded {
     display: flex;
   }
 
-  .navbar-menu li {
+  .nb-menu li {
     text-align: center;
     margin: 0;
     border-radius: 0;
     width: 100%;
   }
 
-  .hamburger {
+  .nb-hamburger {
     display: block;
   }
 
-  .navbar-separator {
+  .nb-separator {
     display: block;
     width: 70%;
     opacity: .5;

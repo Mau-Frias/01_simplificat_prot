@@ -1,40 +1,39 @@
 import './navbar.css'
 import React, { useState, useEffect, useRef } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
-function Navbar({current}) {
+function Navbar() {
   const [isExpanded, setIsExpanded] = useState(false)
-  const [scrollPos, setScrollPos] = useState(0)
+  const [fixed, setFixed] = useState(true)
   const navbarRef = useRef()
 
   const handleClick = () => {
     setIsExpanded(!isExpanded)
   }
-  
+
   const handleScroll = () => {
-    const position = window.scrollY
-    setScrollPos(position)
-    if (scrollPos >= 500) {
-      navbarRef.current.classList.add('navbar-unfixed')
-    } else {
-      navbarRef.current.classList.remove('navbar-unfixed')
+    if (window.scrollY >= 500) {
+      setFixed(false)
+    }
+    else {
+      setFixed(true)
     }
   }
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true })
+    window.addEventListener('scroll', handleScroll)
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [scrollPos])
+  }, [])
 
   return (
-    <nav className='navbar' ref={navbarRef}>
-      <div className='navbar-cont'>
-        <a to='/' className='navbar-logo'>
+    <nav className={`navbar ${fixed ? '' : 'nb-unfixed'}`} ref={navbarRef}>
+      <div className='nb-cont'>
+        <a to='/' className='nb-logo'>
           <h1>Simplifíca-T</h1>
         </a>
-        <button className='hamburger' onClick={handleClick}>
+        <button className='nb-hamburger' onClick={handleClick}>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             className='h-5 w-5'
@@ -47,27 +46,28 @@ function Navbar({current}) {
             />
           </svg>
         </button>
-        <ul className={`navbar-menu ${isExpanded ? 'expanded' : ''}`}>
+
+        <ul className={`nb-menu ${isExpanded ? 'nb-expanded' : ''}`}>
           <li>
-            <NavLink to='/' className='link'>
+            <NavLink to='/' className='nb-link'>
               <i className='fa-solid fa-house fa-xs' /> Inicio
             </NavLink>
           </li>
-          <hr className='navbar-separator' />
+          <hr className='nb-separator' />
           <li>
-            <NavLink to='/nosotros' className='link'>
+            <NavLink to='/nosotros' className='nb-link'>
               <i className='fa-solid fa-users fa-xs' /> Nosotros
             </NavLink>
           </li>
-          <hr className='navbar-separator' />
+          <hr className='nb-separator' />
           <li>
-            <NavLink to='/conocenos' className='link'>
+            <NavLink to='/valores' className='nb-link'>
               <i className='fa-solid fa-heart fa-xs' /> Valores
             </NavLink>
           </li>
-          <hr className='navbar-separator' />
+          <hr className='nb-separator' />
           <li>
-            <NavLink to='/contacto' className='link'>
+            <NavLink to='/contacto' className='nb-link'>
               <i className='fa-solid fa-comments fa-xs' /> Contactos
             </NavLink>
           </li>

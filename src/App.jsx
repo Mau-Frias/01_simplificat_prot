@@ -1,11 +1,11 @@
 import Root from './routes/root.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
-import ErrorPage from './components/errorPage.jsx'
-import Contacto from './routes/contacto.jsx'
-import Home from './routes/home.jsx'
-import Nosotros from './routes/nosotros.jsx'
-import Conocenos from './routes/conocenos.jsx'
+import ErrorPage from './routes/errorPage/errorPage.jsx'
+import Contacto from './routes/contacto/contacto.jsx'
+import Home from './routes/home/home.jsx'
+import Nosotros from './routes/nosotros/nosotros.jsx'
+import Valores from './routes/valores/valores.jsx'
 
 const router = createBrowserRouter([
   {
@@ -21,8 +21,8 @@ const router = createBrowserRouter([
         element: <Contacto />
       },
       {
-        path: '/conocenos',
-        element: <Conocenos />
+        path: '/valores',
+        element: <Valores />
       },
       {
         path: '/nosotros',
@@ -34,11 +34,7 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <>
-      <div className='content'>
-        <RouterProvider router={router} />
-      </div>
-    </>
+    <RouterProvider router={router} />
   )
 }
 

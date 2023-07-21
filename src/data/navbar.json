@@ -1,0 +1,24 @@
+{
+  "links": [
+    {
+      "route": "/",
+      "name": "Inicio",
+      "iconClass": "fa-solid fa-house fa-xs"
+    },
+    {
+      "route": "/nosotros",
+      "name": "Nosotros",
+      "iconClass": "fa-solid fa-users fa-xs"
+    },
+    {
+      "route": "/valores",
+      "name": "Valores",
+      "iconClass": "fa-solid fa-heart fa-xs"
+    },
+    {
+      "route": "/contacto",
+      "name": "Contacto",
+      "iconClass": "fa-solid fa-comments fa-xs"
+    }
+  ]
+}
